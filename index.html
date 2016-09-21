@@ -1,105 +1,70 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8">
-	<title>
-		Расписание
-	</title>
-	<style type="text/css">	
-	  .rotate-90-degrees
-		{
-			filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083);  /* IE6,IE7 */
-			-ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0.083)"; /* IE8 */
-			-moz-transform: rotate(-90.0deg);  /* FF3.5+ */
-			-ms-transform: rotate(-90.0deg);  /* IE9+ */
-			-o-transform: rotate(-90.0deg);  /* Opera 10.5 */
-			-webkit-transform: rotate(-90.0deg);  /* Safari 3.1+, Chrome */
-			transform: rotate(-90.0deg);  /* Standard */
-			white-space: nowrap;
-			text-align: center;
-		}
-		table {
-			border-collapse: collapse;
-			width: 100%;
-			text-align: center;
-		}
 
-		th, td {
-			text-align: center;
-			padding: 8px;
-			background-color: #f2f2f2
-		}
-
-		th {
-			background-color: #4CAF50;
-			text-align: center;
-			color: white;
-		}
-	</style>
-</head>
-<body>
-    <table border="1">
-	<thead>
-	<tr>
-    	<th></th>
-    	<th></th>
-    	<th>MT-301</th>
-    	<th>MX-301</th>
-    	<th>КБ-301</th>
-    	<th>КН-301</th>
-    	<th>КН-302</th>
-    	<th>ФТ-301</th>
-    	<th>ПИ-301</th>
-	</tr>
-	</thead>
-        <tbody>
-        	<tr><td rowspan="10"><div class="rotate-90-degrees">ПОНЕДЕЛЬНИК</div></td><td rowspan="2">I</td><td rowspan="2">Физика</td><td rowspan="2">УМФ</td><td></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2">Прогр.инж.</td></tr>
-            <tr><td>ТЧМК</td></tr>
-            <tr><td rowspan="2">II</td><td rowspan="2">Функан</td><td rowspan="2">УМФ</td><td rowspan="2">ТЧМК</td><td rowspan="2">БД</td><td rowspan="2">ДУ</td><td>КА</td><td rowspan="2">Прогр.инж.</td></tr>
-            <tr><td></td></tr>
-            <tr><td rowspan="2">III</td><td rowspan="2"></td><td rowspan="2">Физ-мех.Практика</td><td colspan="4" rowspan="2">Базы данных</td><td>КА, 628</td></tr>
-            <tr><td>КА, 514</td></tr>
-            <tr><td rowspan="2">IV</td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2">БД</td><td>КА, 625</td><td>КА, 514</td><td rowspan="2"></td><td rowspan="2"></td></tr>
-            <tr><td>КА, 514</td><td>КА, 625</td></tr>
-            <tr><td>V</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-            <tr><td>VI</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-			<tr><td rowspan="6"><div class="rotate-90-degrees">ВТОРНИК</div></td>
-			<td>I</td></tr>
-			<tr><td>II</td></tr>
-			<tr><td>III</td></tr>
-			<tr><td>IV</td></tr>
-			<tr><td>V</td></tr>
-			<tr><td>VI</td></tr>
-			<tr><td rowspan="6"><div class="rotate-90-degrees">СРЕДА</div></td>
-			<td>I</td></tr>
-			<tr><td>II</td></tr>
-			<tr><td>III</td></tr>
-			<tr><td>IV</td></tr>
-			<tr><td>V</td></tr>
-			<tr><td>VI</td></tr>
-			<tr><td rowspan="6"><div class="rotate-90-degrees">ЧЕТВЕРГ</div></td>
-			<td>I</td></tr>
-			<tr><td>II</td></tr>
-			<tr><td>III</td></tr>
-			<tr><td>IV</td></tr>
-			<tr><td>V</td></tr>
-			<tr><td>VI</td></tr>
-			<tr><td rowspan="6"><div class="rotate-90-degrees">ПЯТНИЦА</div></td>
-			<td>I</td></tr>
-			<tr><td>II</td></tr>
-			<tr><td>III</td></tr>
-			<tr><td>IV</td></tr>
-			<tr><td>V</td></tr>
-			<tr><td>VI</td></tr>
-			<tr><td rowspan="6"><div class="rotate-90-degrees">СУББОТА</div></td>
-			<td>I</td></tr>
-			<tr><td>II</td></tr>
-			<tr><td>III</td></tr>
-			<tr><td>IV</td></tr>
-			<tr><td>V</td></tr>
-			<tr><td>VI</td></tr>	
-        </tbody>
-    </table>
-	<img src=http://cs5.pikabu.ru/post_img/big/2015/12/04/5/1449210847155432089.jpg alt="Lenost'" width=1024 height=768>
-</body>
+<!DOCTYPE html> 
+<html> 
+    <head> 
+        <meta charset="utf-8"> 
+        <title>Регистрация почтового ящика @e1.ru</title>
+        <style>
+        	table
+        	{
+        		border: 5px double black;
+        		background-color:"Honeydew";
+        		height:"100%";
+        	}
+        	tr{
+        		background-color: yellow;
+        	}
+        </style>
+    </head>
+    <body>
+        <table align="center"> 
+            <thead align="center">
+                <tr><td colspan="3">Адрес и пароль</td></tr>
+            </thead>
+            <tbody>
+                <tr><td width="10%">(*) E-mail:</td><td width="20%"><input type="text" size="20">@e1.ru</td><td>    Вы можете выбрать любое имя, длиной от 5 до 16 символов и состоящее из латинских букв, цифр, знака подчеркивания ("_") или знака минус ("-"). Имя ящика не может начинаться с символов минус ("-") или знака подчеркивания ("_") и не может заканчиваться символом минус ("-"). В адресе недопустимы последовательности символов два минуса ("--").</td></tr>
+                <tr><td width="10%">(*) Пароль:</td><td width="20%"><input type="text" size="20"></td><td rowspan="2">Пароль должен быть не менее 8 символов, состоять из цифр и английских букв, знаков подчеркивания ("_") или минус ("-"). Пароли не стоит записывать на бумажке и наклеивать на монитор..</td></tr>
+                <tr><td width="10%">(*) Повторите пароль:</td><td width="20%"><input type="text" size="20"></td></tr>
+                <tr><td colspan="3" align="center">Если Вы забудете пароль</td></tr>
+                <tr><td width="10%">(*) Выберите вопрос:</td>
+                <td> <select>
+                         <option disabled selected="selected">Выберите вопрос</option>
+                         <option>Девичья фамилия Вашей мамы</option>
+                         <option>Любимый цвет</option>
+                     </select>
+                </td>
+                <td rowspan="3">Не забывайте вопрос и ответ!</td></tr>
+                <tr><td width="10%">Или задайте свой</td><td width="20%"><input type="text" size="20"></td></tr>
+                <tr><td width="10%">(*) Ответ</td><td width="20%"><input type="text" size="20"></td></tr>
+                <tr><td width="10%">Запасной E-mail:</td><td width="20%"><input type="text" size="20"></td><td> На этот e-mail мы вышлем Вам пароль, если Вы его забудете</td></tr>
+                <tr><td colspan="3" align="center">Информация о пользователе</td></tr>
+                <tr><td width="10%">(*) Имя:</td><td width="20%"><input type="text" size="20"></td><td></td></tr>
+                <tr><td width="10%">(*) Фамилия:</td><td width="20%"><input type="text" size="20"></td><td></td></tr>
+                <tr><td width="10%">(*) Дата рождения:</td>
+                <td> <select>
+                         <option disabled selected="selected">День</option>
+                         <option>1</option>
+                         <option>2</option>
+                         <option>много</option>
+                     </select>
+                     <select>
+                      <option disabled selected="selected">Месяц</option>
+                         <option>Январь</option>
+                         <option>не Январь</option>
+                    </select>
+                    <select>
+                         <option disabled selected="selected">Год</option>
+                         <option>основание Руси</option>
+                         <option>Путиновщина</option>
+                         <option>Покемон ГО</option> 
+                    </select>
+                </td><td></td></tr>
+                <tr><td width="10%">(*) Ваш пол:</td><td><form><input type="radio" name="sex">женский<input type="radio" name="sex">мужской</form></td><td></td></tr>
+                <tr><td colspan="3" align="center">Регистрация на <a href="http://www.e1.ru/">E1.ru</a></td></tr>
+                <tr><td width="10%">Зарегистрировать Вас на E1.ru? :</td><td><input type="radio">Зарегистрировать этот ящик в качестве пользователя на E1.ru</td><td>Если у Вас до сих пор нет регистрации на <a href="http://www.e1.ru/mye1/">E1.ru</a>, советуем Вам отметить данный пункт. Паролем для доступа на E1.ru будет Ваш пароль на почту.</td></tr>
+                <tr><td colspan="3" align="center">Соглашение об использовании</td></tr>
+                <tr><td colspan="3" align="center"><input type="radio">Я прочитал и согласен с <a href="http://support.e1.ru/help/3208/3228/">Пользовательским соглашением</a>, а также с <a href="http://support.e1.ru/help/3208/3348">Политикой конфиденциальности</a> портала E1.RU.</td></tr>
+            </tbody>
+        </table>
+    </body>
 </html>
