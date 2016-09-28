@@ -1,70 +1,42 @@
-<!DOCTYPE html> 
-<html> 
-    <head> 
-        <meta charset="utf-8"> 
-        <title>Регистрация почтового ящика @e1.ru</title>
-        <style>
-        	table
-        	{
-        		border: 5px double black;
-        		background-color:"Honeydew";
-        		height:"100%";
-        	}
-        	tr, td{
-                border:1px dotted black;
-        		background-color: "Honeydew";
-        	}
-        </style>
-    </head>
-    <body>
-        <table align="center"> 
-            <thead align="center">
-                <tr><td colspan="3">Адрес и пароль</td></tr>
-            </thead>
-            <tbody>
-                <tr><td width="10%">(*) E-mail:</td><td width="20%"><input type="text" size="20">@e1.ru</td><td>    Вы можете выбрать любое имя, длиной от 5 до 16 символов и состоящее из латинских букв, цифр, знака подчеркивания ("_") или знака минус ("-"). Имя ящика не может начинаться с символов минус ("-") или знака подчеркивания ("_") и не может заканчиваться символом минус ("-"). В адресе недопустимы последовательности символов два минуса ("--").</td></tr>
-                <tr><td width="10%">(*) Пароль:</td><td width="20%"><input type="text" size="20"></td><td rowspan="2">Пароль должен быть не менее 8 символов, состоять из цифр и английских букв, знаков подчеркивания ("_") или минус ("-"). Пароли не стоит записывать на бумажке и наклеивать на монитор..</td></tr>
-                <tr><td width="10%">(*) Повторите пароль:</td><td width="20%"><input type="text" size="20"></td></tr>
-                <tr><td colspan="3" align="center">Если Вы забудете пароль</td></tr>
-                <tr><td width="10%">(*) Выберите вопрос:</td>
-                <td> <select>
-                         <option disabled selected="selected">Выберите вопрос</option>
-                         <option>Девичья фамилия Вашей мамы</option>
-                         <option>Любимый цвет</option>
-                     </select>
-                </td>
-                <td rowspan="3">Не забывайте вопрос и ответ!</td></tr>
-                <tr><td width="10%">Или задайте свой</td><td width="20%"><input type="text" size="20"></td></tr>
-                <tr><td width="10%">(*) Ответ</td><td width="20%"><input type="text" size="20"></td></tr>
-                <tr><td width="10%">Запасной E-mail:</td><td width="20%"><input type="text" size="20"></td><td> На этот e-mail мы вышлем Вам пароль, если Вы его забудете</td></tr>
-                <tr><td colspan="3" align="center">Информация о пользователе</td></tr>
-                <tr><td width="10%">(*) Имя:</td><td width="20%"><input type="text" size="20"></td><td></td></tr>
-                <tr><td width="10%">(*) Фамилия:</td><td width="20%"><input type="text" size="20"></td><td></td></tr>
-                <tr><td width="10%">(*) Дата рождения:</td>
-                <td> <select>
-                         <option disabled selected="selected">День</option>
-                         <option>1</option>
-                         <option>2</option>
-                         <option>много</option>
-                     </select>
-                     <select>
-                      <option disabled selected="selected">Месяц</option>
-                         <option>Январь</option>
-                         <option>не Январь</option>
-                    </select>
-                    <select>
-                         <option disabled selected="selected">Год</option>
-                         <option>основание Руси</option>
-                         <option>Путиновщина</option>
-                         <option>Покемон ГО</option> 
-                    </select>
-                </td><td></td></tr>
-                <tr><td width="10%">(*) Ваш пол:</td><td><form><input type="radio" name="sex">женский<input type="radio" name="sex">мужской</form></td><td></td></tr>
-                <tr><td colspan="3" align="center">Регистрация на <a href="http://www.e1.ru/">E1.ru</a></td></tr>
-                <tr><td width="10%">Зарегистрировать Вас на E1.ru? :</td><td><input type="radio">Зарегистрировать этот ящик в качестве пользователя на E1.ru</td><td>Если у Вас до сих пор нет регистрации на <a href="http://www.e1.ru/mye1/">E1.ru</a>, советуем Вам отметить данный пункт. Паролем для доступа на E1.ru будет Ваш пароль на почту.</td></tr>
-                <tr><td colspan="3" align="center">Соглашение об использовании</td></tr>
-                <tr><td colspan="3" align="center"><input type="radio">Я прочитал и согласен с <a href="http://support.e1.ru/help/3208/3228/">Пользовательским соглашением</a>, а также с <a href="http://support.e1.ru/help/3208/3348">Политикой конфиденциальности</a> портала E1.RU.</td></tr>
-            </tbody>
-        </table>
-    </body>
-</html>
+<!DOCTYPE html>
+<head>
+	<title>
+		Print
+	</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<style type="text/css"> 
+		@media print { 
+			#navbar{
+				display: none;
+			}
+			a[href]:after { 
+			content: " [" attr(href) "]"; 
+			} 
+			a { 
+			text-decoration: none; 
+			} 
+			p { 
+			text-align: justify; 
+			} 
+		} 
+	</style>
+</head>
+<body>	
+	<nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" href="#top_page">Top</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li><a href="#profile">Profile</a></li>
+	      <li><a href="#gallery">Gallery</a></li>
+	      <li><a href="#contacts">Contacts</a></li> 
+	      <li><a href="#about">About</a></li> 
+	    </ul>
+	  </div>
+    </nav>
+	<a href="http://samyitupoi.narod.ru/">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</a>
+	<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+	"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+</body>
