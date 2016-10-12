@@ -12,11 +12,11 @@
 				for (var i = 0; i < divs.length; i++) {
 					divs[i].style.left = parseInt(divs[i].style.left) + velocities[i][0] + "px"
 					divs[i].style.top = parseInt(divs[i].style.top) + velocities[i][1] + "px"
-					if (parseInt(divs[i].style.left) >= (1024 - parseInt(divs[i].style.width))
+					if (parseInt(divs[i].style.left) >= 1024
 					   || parseInt(divs[i].style.left) <= parseInt(divs[i].style.width)){
 						velocities[i][0] *= -1
 					}
-					if (parseInt(divs[i].style.top) >= (600 - parseInt(divs[i].style.height))
+					if (parseInt(divs[i].style.top) >= 600
 					   || parseInt(divs[i].style.top) <= (parseInt(divs[i].style.height))){
 						velocities[i][1] *= -1
 					}
@@ -32,7 +32,7 @@
 				var g = Math.floor(Math.random() * 255)
 				var b = Math.floor(Math.random() * 255)
 
-				var size = Math.random() * (100 - 20) + 20
+				var size = Math.random() * (50 - 15) + 15
 
 				var animateLeft = Math.random() * 10
 				var animateTop = Math.random() * 10
@@ -40,17 +40,13 @@
 				var animateBottom = Math.random() * 10
 				if (animateLeft > animateRight){
 					animateRight = 0
-					animateLeft /= 2
 				} else {
 					animateLeft = 0
-					animateRight /= 2
 				}
 				if (animateTop > animateBottom){
 					animateBottom = 0
-					animateTop /= 2
 				} else {
 					animateTop = 0
-					animateBottom /= 2
 				}
 
 
@@ -66,8 +62,8 @@
 				document.body.appendChild(div)
 			}
 			function drawMany() {
-				setInterval(drawRandom, 400)
-				setInterval(move, 60)
+				setInterval(drawRandom, 1000)
+				setInterval(move, 25)
 			}
 		</script>
 		<style type="text/css"> 
@@ -79,9 +75,15 @@
 				width: 1024px;
 				height: 600px;
 			}
+			.brd {
+		    border: 4px double black;
+		    width: 1024px;
+			height: 600px;
+
+		   }
 		</style>
 	</head>
-	<body>	
-		
+	<body>
+		<div class="brd"></div>
 	</body>
 </html>
