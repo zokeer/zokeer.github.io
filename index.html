@@ -2,43 +2,86 @@
 <html>
 	<head>
 		<title>
-			Print
+			Squares
 		</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<style type="text/css"> 
-			@media print { 
-				#navbar{
-					display: none;
+		<script type="text/javascript">
+			var divs = []
+			var velocities = []
+			drawMany()
+			function move() {
+				for (var i = 0; i < divs.length; i++) {
+					divs[i].style.left = parseInt(divs[i].style.left) + velocities[i][0] + "px"
+					divs[i].style.top = parseInt(divs[i].style.top) + velocities[i][1] + "px"
+					if (parseInt(divs[i].style.left) >= (1024 - parseInt(divs[i].style.width))
+					   || parseInt(divs[i].style.left) <= parseInt(divs[i].style.width)){
+						velocities[i][0] *= -1
+					}
+					if (parseInt(divs[i].style.top) >= (600 - parseInt(divs[i].style.height))
+					   || parseInt(divs[i].style.top) <= (parseInt(divs[i].style.height))){
+						velocities[i][1] *= -1
+					}
+					divs[i].style.display = 'none'
+					divs[i].style.display = 'block'
 				}
-				a[href]:after { 
-				content: " [" attr(href) "]"; 
-				} 
-				a { 
-				text-decoration: none; 
-				} 
-				p { 
-				text-align: justify; 
-				} 
-			} 
+			}
+			function drawRandom() {
+				var x = Math.random() * (1024)
+				var y = Math.random() * (560)
+
+				var r = Math.floor(Math.random() * 255)
+				var g = Math.floor(Math.random() * 255)
+				var b = Math.floor(Math.random() * 255)
+
+				var size = Math.random() * (100 - 20) + 20
+
+				var animateLeft = Math.random() * 10
+				var animateTop = Math.random() * 10
+				var animateRight = Math.random() * 10
+				var animateBottom = Math.random() * 10
+				if (animateLeft > animateRight){
+					animateRight = 0
+					animateLeft /= 2
+				} else {
+					animateLeft = 0
+					animateRight /= 2
+				}
+				if (animateTop > animateBottom){
+					animateBottom = 0
+					animateTop /= 2
+				} else {
+					animateTop = 0
+					animateBottom /= 2
+				}
+
+
+				var div = document.createElement('div')
+				div.style.position = 'absolute'
+				div.style.left = x +'px'
+				div.style.top = y + 'px'
+				div.style.width = size + 'px'
+				div.style.height = size + 'px'
+				div.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')'
+				divs.push(div)
+				velocities.push([animateRight - animateLeft, animateBottom - animateTop])
+				document.body.appendChild(div)
+			}
+			function drawMany() {
+				setInterval(drawRandom, 400)
+				setInterval(move, 60)
+			}
+		</script>
+		<style type="text/css"> 
+			html{
+				height: 600px;
+			}
+			body{
+				border: 5px;
+				width: 1024px;
+				height: 600px;
+			}
 		</style>
 	</head>
 	<body>	
-		<nav class="navbar navbar-inverse">
-	      <div class="container-fluid">
-		    <div class="navbar-header">
-		      <a class="navbar-brand" href="#top_page">Top</a>
-		    </div>
-		    <ul class="nav navbar-nav">
-		      <li><a href="#profile">Profile</a></li>
-		      <li><a href="#gallery">Gallery</a></li>
-		      <li><a href="#contacts">Contacts</a></li> 
-		      <li><a href="#about">About</a></li> 
-		    </ul>
-		  </div>
-	    </nav>
-		<a href="http://samyitupoi.narod.ru/">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</a>
-		<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-		"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+		
 	</body>
 </html>
